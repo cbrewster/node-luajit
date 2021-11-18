@@ -26,7 +26,8 @@ if (os.platform() === 'win32') {
     return 0
 } else {
     // linux
-    child = spawn('cd 3rdlibs/LuaJIT && make && make install', {shell: true});
+    // child = spawn('cd 3rdlibs/LuaJIT && make && make install', {shell: true});
+    return 0;
 }
 
 child.stdout.pipe(process.stdout);
