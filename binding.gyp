@@ -62,13 +62,10 @@
           'OS=="linux"',
           {
             "include_dirs": [
-              "<(module_root_dir)/3rdlibs/LuaJIT/src"
-            ],
-            "library_dirs": [
-              "<(module_root_dir)/3rdlibs/LuaJIT/src"
+              "pkg-config --cflags-only-I luajit | sed s\/-I//g"
             ],
             "libraries": [
-              "<(module_root_dir)/3rdlibs/LuaJIT/src/libluajit.so"
+              "pkg-config --libs-only-L luajit | sed s\/-L//g"
             ],
             "actions": [
             ]
