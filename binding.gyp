@@ -62,10 +62,10 @@
           'OS=="linux"',
           {
             "include_dirs": [
-              "pkg-config --cflags-only-I luajit | sed s\/-I//g"
+              "<!@(pkg-config --cflags-only-I luajit | sed s\/-I//g)"
             ],
             "libraries": [
-              "pkg-config --libs-only-L luajit | sed s\/-L//g"
+              "<!@(pkg-config --libs-only-L luajit | sed s\/-L//g)"
             ],
             "actions": [
             ]
